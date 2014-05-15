@@ -1,1 +1,7 @@
-TODO - add a form here for creating an email
+
+
+<%= form_for :email, url: email_contacts_path(@contact.id), method: 'post' do |f| %>
+  <%= f.text_field :subject, placeholder: 'Subject' %>
+  <%= f.text_area :body, placeholder: 'Email Body' %>
+  <%= f.submit 'Send Email', :class=> 'btn btn-primary'%>
+<% end %>
